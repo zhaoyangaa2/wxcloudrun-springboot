@@ -1,13 +1,17 @@
 server:
-  port: 80
-
+  port: 443
+  ssl:
+    # xxx.jks为你ssl下载文件里的那个jks文件，与放到resources文件夹下的名字一致
+    key-store: classpath:cert.jks
+    key-store-password: spLU9PoK
+    key-store-type: JKS
 
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${MYSQL_ADDRESS}/${MYSQL_DATABASE:springboot_demo}
-    username: ${MYSQL_USERNAME}
-    password: ${MySQL_PASSWORD}
+    url: jdbc:mysql://123.60.78.103:3306/my
+    username: root
+    password: 123456
   mvc:
     view:
       suffix: .html
