@@ -23,13 +23,10 @@ import java.util.List;
 
 public class CounterController {
 
-  final CounterService counterService;
-  final Logger logger;
+  @Autowired
+  CounterService counterService;
 
-  public CounterController(@Autowired CounterService counterService) {
-    this.counterService = counterService;
-    this.logger = LoggerFactory.getLogger(CounterController.class);
-  }
+  Logger logger = LoggerFactory.getLogger(CounterController.class);
 
 
   /**
